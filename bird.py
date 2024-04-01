@@ -1,3 +1,5 @@
+# This is a base template for using the BirdEye API to get token data
+
 import requests
 import private as p
 import pandas as pd
@@ -55,3 +57,14 @@ for token in data['data']['tokens']:
     mcs.append(token['mc'])
     v24hChangePercents.append(token['v24hChangePercent'])
     v24hUSDs.append(token['v24hUSD'])
+
+
+# Example of printing all tokens with market cap greater than 30,000
+indexes = []
+
+for i in range(len(addresses)):
+    if type(mcs[i]) == float and mcs[i] > 30000:
+        indexes.append(i)
+
+for x in indexes:
+    print(names[x], symbols[x], mcs[x])
