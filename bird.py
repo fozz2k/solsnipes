@@ -1,16 +1,32 @@
 import requests
 import private as p
+import pandas as pd
+import pprint as pp
 import json
 
-# Get url for token list
-tokenlist = "https://public-api.birdeye.so/public/tokenlist?sort_by=v24hUSD&sort_type=desc"
+# Get url for token list sorted by 24h change percent
+tokenlist = "https://public-api.birdeye.so/defi/tokenlist?sort_by=v24hChangePercent&sort_type=desc"
 # Get list of headers from Solana chain
+# Replace p.apikey with your apikey from birdeye
+# https://bds.birdeye.so/
 headers = {"x-chain": "solana", "X-API-KEY": p.apikey}
 # Make request
 listings = requests.get(tokenlist, headers=headers)
-# Write to file in listings.json
-with open("listings.json", "w") as outfile:
-    json.dump(listings.text, outfile, indent=4)
+
+# write to pandas and check if status code is 200
+if listings.status_code == 200:
+    data = listings.json()['data']
+    with open("listings.log", "w") as outfile:
+        pp.pprint(data, outfile)
+    
+    df = pd.DataFrame(data)
+
+    csv_file_path = 'bird.csv'
+    df.to_csv(csv_file_path, index=False)
+    print (f"Data saved to {csv_file_path}")
+else:
+    print("Error: ", listings.status_code)
+    exit()
 
 # Load data to json object
 data = json.loads(listings.text)
@@ -39,8 +55,3 @@ for token in data['data']['tokens']:
     mcs.append(token['mc'])
     v24hChangePercents.append(token['v24hChangePercent'])
     v24hUSDs.append(token['v24hUSD'])
-
-# Write to info.txt
-with open('info.txt', 'w') as file:
-    for i in range(len(addresses)):
-        file.write(' '.join(map(str, [names[i], symbols[i], decimals[i], lastTradeUnixTimes[i], liquiditys[i], logoURIs[i], mcs[i], v24hChangePercents[i], v24hUSDs[i]])) + '\n')
