@@ -5,12 +5,16 @@ There are many altcoins in the solana ecosystem that are mooning in this bullrun
 solsnipes is a solana altcoin sniper. 
 Essentially, it finds new altcoins that our machine learning model predicts have potential to grow!
 
+## Prerequisites
+1. You must have python installed. Navigate to `https://www.python.org/downloads/` to download python.
+2. Create a birdeye api key `@ https://bds.birdeye.so/`
+
 ## Configuration
 
-1. Navigate to `request.py` in the `./apps/components` folder.
+1. Clone the github repo. This can be done by running `git clone https://github.com/calebjlee/solsnipes.git` in the folder you would like.
 2. If you do not have requests installed run `pip install requests`
-3. Create a birdeye api key `@ https://bds.birdeye.so/`
-4. Change the api key to the one you create in step 1 under the p.bird_apikey.
+3. Navigate to `request.py` in the `./apps/components` folder.
+4. Change the api key to the one you created in step 2 of Prerequisites.
 5. Change `min` and `max` market cap values to your liking.
 6. Adjust `offset`: `1920` is a good starting point to filter for coins below `300k` market cap.
 
