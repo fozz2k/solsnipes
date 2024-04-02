@@ -1,9 +1,7 @@
-## solsnipes
+# solsnipes
 
 solsnipes is a solana altcoin sniper. 
 Essentially, it finds new altcoins that our machine learning model predicts have potential to grow
-
-# Setup
 
 ## Configuration
 
