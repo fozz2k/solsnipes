@@ -1,3 +1,7 @@
+## solsnipes
+
+solsnipes is a solana altcoin sniper. 
+Essentially, it finds new altcoins that our machine learning model predicts have potential to grow
 
 # Setup
 
@@ -22,6 +26,7 @@
 # Future Updates Coming
 
 - We aim to filter coins to avoid rug pulls. Check out `strategy.txt` to see some of our ideas.
-- We plan to use OpenAI to scan charts to make sure the volume is real.
+- We plan to use OpenAI to scan charts to identify healthy trading patterns using machine learning.
 - We intend to connect a Solana wallet to UniSwap to automate our trades.
 - We are looking to code an exit strategy for each coin sniped.
+- We are planning on creating a website with the top altcoins listed to help other traders identify up and coming altcoins (NFA).
