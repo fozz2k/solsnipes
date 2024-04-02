@@ -16,3 +16,12 @@ class Token:
 
     def __repr__(self):
         return f"{self.name} ({self.symbol})"
+    
+class sToken:
+    def __init__(self, name, symbol, mc, liquidity, v24hChangePercent, v24hUSD):
+        self.name = name
+        self.symbol = symbol
+        self.mc = mc
+        self.liquidity = liquidity
+        self.v24hChangePercent = v24hChangePercent
+        self.v24hUSD = v24hUSD
