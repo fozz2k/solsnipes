@@ -8,7 +8,7 @@ Essentially, it finds new altcoins that our machine learning model predicts have
 ## Configuration
 
 1. Navigate to `request.py` in the `./apps/components` folder.
-2. Create a birdeye api key @ https://bds.birdeye.so/
+2. Create a birdeye api key `@ https://bds.birdeye.so/`
 3. Change the api key to the one you create in step 1 under the p.bird_apikey
 4. Change `min` and `max` market cap values to your liking.
 5. Adjust `offset`: `1920` is a good starting point to filter for coins below `300k` market cap.
