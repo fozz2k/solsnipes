@@ -1,7 +1,9 @@
 # solsnipes
 
+I am sure you have heard of dogwifhat, Mew, pepe climb, etc. 
+There are many altcoins in the solana ecosystem that are mooning in this bullrun.
 solsnipes is a solana altcoin sniper. 
-Essentially, it finds new altcoins that our machine learning model predicts have potential to grow
+Essentially, it finds new altcoins that our machine learning model predicts have potential to grow!
 
 ## Configuration
 
