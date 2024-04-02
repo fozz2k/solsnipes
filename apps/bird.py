@@ -1,13 +1,13 @@
 # This is a base template for using the BirdEye API to get token data
 
 import requests
-import private as p
+import components.private as p
 import pandas as pd
 import pprint as pp
 import json
 
 # Get url for token list sorted by 24h change percent
-tokenlist = "https://public-api.birdeye.so/defi/tokenlist?sort_by=v24hChangePercent&sort_type=desc"
+tokenlist = "https://public-api.birdeye.so/defi/tokenlist?sort_by=mc&sort_type=desc&offset=2000"
 # Get list of headers from Solana chain
 # Replace p.apikey with your apikey from birdeye
 # https://bds.birdeye.so/
@@ -18,12 +18,12 @@ listings = requests.get(tokenlist, headers=headers)
 # write to pandas and check if status code is 200
 if listings.status_code == 200:
     data = listings.json()['data']
-    with open("listings.log", "w") as outfile:
+    with open("../textfiles/listings.log", "w") as outfile:
         pp.pprint(data, outfile)
     
     df = pd.DataFrame(data)
 
-    csv_file_path = 'bird.csv'
+    csv_file_path = '../textfiles/bird.csv'
     df.to_csv(csv_file_path, index=False)
     print (f"Data saved to {csv_file_path}")
 else:
