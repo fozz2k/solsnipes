@@ -1,7 +1,7 @@
 
 # Solsnipes 🚀
 
-Welcome to **Solsnipes** – your gateway to discovering potential moonshots within the Solana ecosystem! Sad that you missed out on trending tokens like **Dogwifhat**, **MEW**, and **Pepe Climb**? Our platform leverages machine learning to pinpoint emerging altcoins poised for growth! 🚀🚀🚀
+Welcome to **Solsnipes** – your gateway to discovering potential moonshots within the Solana ecosystem! Sad that you missed out on trending tokens like **Dogwifhat**, **MEW**, and **Pepe Climb**? Our platform leverages machine learning to pinpoint emerging altcoins poised for growth! 🚀
 
 ## 📋 Prerequisites
 
