@@ -1,4 +1,5 @@
 # This is a base template for using the BirdEye API to get token data
+# Probably ignore this file for now and refer to main
 
 import requests
 import components.private as p

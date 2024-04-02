@@ -21,7 +21,7 @@ def get_coins(max_cap = 1000000, min_cap = 0, offset = 0):
         # Extract data
         for token in data['data']['tokens']:
             if type(token['mc']) == float and token['mc'] > min_cap and token['mc'] < max_cap:
-                coins.append(tc.Token(token['address'], token['name'], token['symbol'], token['decimals'], token['lastTradeUnixTime'], token['liquidity'], token['logoURI'], token['mc'], token['v24hChangePercent'], token['v24hUSD']))
+                coins.append(tc.FullToken(token['address'], token['name'], token['symbol'], token['decimals'], token['lastTradeUnixTime'], token['liquidity'], token['logoURI'], token['mc'], token['v24hChangePercent'], token['v24hUSD']))
             else:
                 if len(coins) > 0:
                     return coins
