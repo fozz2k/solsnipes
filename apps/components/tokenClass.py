@@ -1,10 +1,10 @@
 # Base token class for filter.py
 class Token:
-    def __init__(self, name, symbol, mc, liquidity, v24hChangePercent, v24hUSD):
+    def __init__(self, name, symbol, liquidity, mc, v24hChangePercent, v24hUSD):
         self.name = name
         self.symbol = symbol
-        self.mc = mc
         self.liquidity = liquidity
+        self.mc = mc
         self.v24hChangePercent = v24hChangePercent
         self.v24hUSD = v24hUSD
 class FullToken(Token):
@@ -23,3 +23,12 @@ class FullToken(Token):
 
     def __repr__(self):
         return f"{self.name} ({self.symbol}) - Address: {self.address}"
+    
+class CoinrankingToken:
+    def __init__(self, name, symbol, price, market_cap, change, volume):
+        self.name = name
+        self.symbol = symbol
+        self.price = price
+        self.market_cap = market_cap
+        self.change = change
+        self.volume = volume

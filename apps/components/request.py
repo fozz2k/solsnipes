@@ -10,7 +10,7 @@ def get_coins(max_cap = 1000000, min_cap = 0, offset = 0):
     # Get list of headers from Solana chain
     # Replace p.apikey with your apikey from birdeye
     # https://bds.birdeye.so/
-    headers = {"x-chain": "solana", "X-API-KEY": p.apikey}
+    headers = {"x-chain": "solana", "X-API-KEY": p.bird_apikey}
     coins = []
     while (True):
         # Make request
@@ -25,6 +25,7 @@ def get_coins(max_cap = 1000000, min_cap = 0, offset = 0):
             else:
                 if len(coins) > 0:
                     return coins
+        # You can change the value of 3000, but this just prevents an infinite loop
         if (offset > initial_offset + 3000):
             return coins
         offset += 50

@@ -21,11 +21,10 @@ You need the project owners to publish the url of the LP lock timer to know how 
 
 If the token has pools/farms, the top holder will usually be the pool/farm contract.
 
-Top receivers
-Token total supply: 1,000,000,000,000.0000
-
 Often, the dev will distribute their initial supply across multiple wallets to hide the amount that they own. 
 This table shows the top 10 receivers of the token (even if they have sent it to other wallets).
+
+Check the telegram and social media of the coin. Higher involvement is generally promising in comparison to the amount of holders.
 
 Check if the the supply was transferred to them by the dev wallet, or purchased instantly after creating the LP and the sum of money spent purchasing. 
 If a large amount was spent in the first few minutes of creating the LP, it is probably one of the dev wallets. 

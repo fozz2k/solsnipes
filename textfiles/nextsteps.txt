@@ -1,0 +1,15 @@
+1. Create a list of historical memecoins/altcoins that have made at least a 100x from their starting price to their peak, 
+while maintaining at least a 10x from their starting price to their peak.
+2. Analyze healthy ranges of 24hvolume and liquidity to market cap.
+3. Analyze healthy ranges of the number of holders
+4. Create more datapoints to analyze from to make sure that coins are not rug pulls
+Ideas: holders/Social Media followers, holders/Telegram member count, Liquidity Pool burned, etc.
+We can use ChatGPT to help us come up with ideas. 
+Ideally we have a machine learning model that is able to adjust these values meticulously through backtesting
+
+Steps to do later down the line:
+1. Implement computer vision (possibly with the use of OpenAI?) to track candle patterns of potential coins
+2. Come up with an exit strategy. For instance, RSI, Bollinger Bands, EMAs, etc.
+3. Backtest, backtest, backtest. Make sure our strategy is profitable
+4. Connect solflare wallet and UniSwap
+5. Run the bot with a low amount of money, (50$)? With 5$ buy-ins
