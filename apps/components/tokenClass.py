@@ -25,10 +25,12 @@ class FullToken(Token):
         return f"{self.name} ({self.symbol}) - Address: {self.address}"
     
 class CoinrankingToken:
-    def __init__(self, name, symbol, price, market_cap, change, volume):
+    def __init__(self, name, symbol, price, market_cap, change, volume, tier, uuid):
         self.name = name
         self.symbol = symbol
         self.price = price
         self.market_cap = market_cap
         self.change = change
         self.volume = volume
+        self.tier = tier
+        self.uuid = uuid

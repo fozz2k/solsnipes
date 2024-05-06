@@ -7,7 +7,6 @@ def get_coins(max_cap = 1000000, min_cap = 0, offset = 0):
     initial_offset = offset
     # Get url for token list sorted by 24h change percent
     tokenlist = "https://public-api.birdeye.so/defi/tokenlist?sort_by=mc&sort_type=desc&offset="
-    # Get list of headers from Solana chain
     # Replace p.apikey with your apikey from birdeye
     # https://bds.birdeye.so/
     headers = {"x-chain": "solana", "X-API-KEY": p.bird_apikey}
